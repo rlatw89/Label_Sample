@@ -17,6 +17,13 @@
 		0253049B2792DA9F009563D8 /* LabelSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0253049A2792DA9F009563D8 /* LabelSampleTests.swift */; };
 		025304A52792DA9F009563D8 /* LabelSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304A42792DA9F009563D8 /* LabelSampleUITests.swift */; };
 		025304A72792DA9F009563D8 /* LabelSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304A62792DA9F009563D8 /* LabelSampleUITestsLaunchTests.swift */; };
+		025304B52792DAC9009563D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304B42792DAC9009563D8 /* MainViewController.swift */; };
+		025304B82792DBA8009563D8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304B72792DBA8009563D8 /* TextView.swift */; };
+		025304BA2792F188009563D8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304B92792F188009563D8 /* MainViewModel.swift */; };
+		025304BC27932719009563D8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304BB27932719009563D8 /* Extension.swift */; };
+		025304BE27933032009563D8 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304BD27933032009563D8 /* TableViewCell.swift */; };
+		025304C127933180009563D8 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304C027933180009563D8 /* Label.swift */; };
+		025304C32793321C009563D8 /* UnderlineLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304C22793321C009563D8 /* UnderlineLayoutManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		025304A02792DA9F009563D8 /* LabelSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LabelSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		025304A42792DA9F009563D8 /* LabelSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelSampleUITests.swift; sourceTree = "<group>"; };
 		025304A62792DA9F009563D8 /* LabelSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		025304B42792DAC9009563D8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		025304B72792DBA8009563D8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		025304B92792F188009563D8 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		025304BB27932719009563D8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		025304BD27933032009563D8 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		025304C027933180009563D8 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		025304C22793321C009563D8 /* UnderlineLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineLayoutManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +115,9 @@
 		0253047F2792DA9E009563D8 /* LabelSample */ = {
 			isa = PBXGroup;
 			children = (
+				025304BF27933175009563D8 /* Label */,
+				025304B62792DB9E009563D8 /* Text */,
+				025304B32792DABA009563D8 /* Main */,
 				025304802792DA9E009563D8 /* AppDelegate.swift */,
 				025304822792DA9E009563D8 /* SceneDelegate.swift */,
 				025304842792DA9E009563D8 /* ViewController.swift */,
@@ -128,6 +145,34 @@
 				025304A62792DA9F009563D8 /* LabelSampleUITestsLaunchTests.swift */,
 			);
 			path = LabelSampleUITests;
+			sourceTree = "<group>";
+		};
+		025304B32792DABA009563D8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				025304B42792DAC9009563D8 /* MainViewController.swift */,
+				025304B92792F188009563D8 /* MainViewModel.swift */,
+				025304BB27932719009563D8 /* Extension.swift */,
+				025304BD27933032009563D8 /* TableViewCell.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		025304B62792DB9E009563D8 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				025304B72792DBA8009563D8 /* TextView.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		025304BF27933175009563D8 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				025304C027933180009563D8 /* Label.swift */,
+				025304C22793321C009563D8 /* UnderlineLayoutManager.swift */,
+			);
+			path = Label;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +306,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025304BA2792F188009563D8 /* MainViewModel.swift in Sources */,
 				025304852792DA9E009563D8 /* ViewController.swift in Sources */,
 				025304812792DA9E009563D8 /* AppDelegate.swift in Sources */,
+				025304BE27933032009563D8 /* TableViewCell.swift in Sources */,
 				0253048B2792DA9E009563D8 /* LabelSample.xcdatamodeld in Sources */,
+				025304B82792DBA8009563D8 /* TextView.swift in Sources */,
 				025304832792DA9E009563D8 /* SceneDelegate.swift in Sources */,
+				025304C32793321C009563D8 /* UnderlineLayoutManager.swift in Sources */,
+				025304B52792DAC9009563D8 /* MainViewController.swift in Sources */,
+				025304C127933180009563D8 /* Label.swift in Sources */,
+				025304BC27932719009563D8 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
