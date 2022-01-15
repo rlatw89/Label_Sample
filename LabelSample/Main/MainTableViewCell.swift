@@ -19,7 +19,7 @@ enum TableViewCellMode {
 class MainTableViewCell: UITableViewCell {
     var isSwipeInActive: Bool = false
     var section: Int = 0
-    var swipeGesture: UIPanGestureRecognizer
+    var swipeGesture: UIPanGestureRecognizer?
     var delegate: SampleTableViewCellDelegate?
     var mode: TableViewCellMode = .normal {
         didSet {
@@ -51,9 +51,13 @@ class MainTableViewCell: UITableViewCell {
         return button
     } ()
     
-    private lazy var attributeLabel = {
+    lazy var attributeLabel: Label = {
         let label = Label()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.linkEnabled = true
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .black
+        label.numberOfLines = 0
         return label
     } ()
     
