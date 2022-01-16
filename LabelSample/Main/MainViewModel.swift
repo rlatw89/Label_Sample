@@ -8,15 +8,18 @@
 import Foundation
 
 class MainViewModel {
-    var userInputBuffer: String = ""
+    var userInputBuffer: String?
     private var textSampleList: [String] = []
     var numOfTableViewSection: Int = 1
     
+    /// Number of tableView rows in section
+    /// - Parameter section: section index
+    /// - Returns: num of rows
     func getNumOfRows(in section: Int) -> Int {
         return textSampleList.count
     }
     
-    func getTableViewIdentifier(at section: Int, row: Int) -> String {
+    func getTableViewIdentifier(at section: Int, row: Int) -> String? {
         return "LABEL"
     }
     

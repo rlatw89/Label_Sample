@@ -12,7 +12,7 @@ class UnderlineLayoutManager: NSLayoutManager {
     static let underlineStyle = 0x11
     static let backgroundStyle = 0x12
     
-    private func drawOhaUnderlineForRect(_ rect: CGRect) {
+    private func drawUnderlineForRect(_ rect: CGRect) {
         let test = CGRect(x: rect.minX, y: rect.minY - (rect.height / 4), width: rect.width, height: (rect.height / 4))
         let path = UIBezierPath(roundedRect: test, cornerRadius: 0)
         UIColor.SampleColors.main.setFill()
@@ -41,7 +41,7 @@ class UnderlineLayoutManager: NSLayoutManager {
                 let boundingRect = self.boundingRect(forGlyphRange: glyphRange, in: container)
                 let offsetRect = boundingRect.offsetBy(dx: containerOrigin.x, dy: containerOrigin.y)
                 
-                drawOhaUnderlineForRect(offsetRect)
+                drawUnderlineForRect(offsetRect)
             }
         }
         else if underlineVal.rawValue == UnderlineLayoutManager.backgroundStyle {

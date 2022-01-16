@@ -5,6 +5,7 @@
 //  Created by Taewan_MacBook on 2022/01/16.
 //
 
+import UIKit
 import WebKit
 
 extension WebViewController: WKNavigationDelegate {
@@ -60,5 +61,53 @@ extension WebViewController: WKNavigationDelegate {
         else {
             decisionHandler(.allow)
         }
+    }
+}
+
+extension WebViewController: WKUIDelegate, WKScriptMessageHandler {
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+    }
+    
+    private func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Swift.Void) {
+        debugPrint("JavaScript Alert - \(String(describing: webView.url?.absoluteString))")
+        
+        let alertController = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "확인", style: .cancel) { _ in completionHandler() }
+        alertController.addAction(cancelAction)
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    /// webview alert confirmation or cancellation delegate
+    func webView(_ webView: WKWebView,
+                 runJavaScriptConfirmPanelWithMessage message: String,
+                 initiatedByFrame frame: WKFrameInfo,
+                 completionHandler: @escaping (Bool) -> Void) {
+      let alertController = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+
+      let cancelAction = UIAlertAction(title: "취소", style: .cancel) { _ in
+        completionHandler(false)
+      }
+
+      let okAction = UIAlertAction(title: "확인", style: .default) { _ in
+        completionHandler(true)
+      }
+
+      alertController.addAction(cancelAction)
+      alertController.addAction(okAction)
+
+      DispatchQueue.main.async {
+        self.present(alertController, animated: true, completion: nil)
+      }
+    }
+    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        // open target = "_blank"
+        if let frame = navigationAction.targetFrame, frame.isMainFrame {
+            return nil
+        }
+        webView.load(navigationAction.request)
+        return nil
     }
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		025304812792DA9E009563D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304802792DA9E009563D8 /* AppDelegate.swift */; };
 		025304832792DA9E009563D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304822792DA9E009563D8 /* SceneDelegate.swift */; };
-		025304852792DA9E009563D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304842792DA9E009563D8 /* ViewController.swift */; };
 		025304882792DA9E009563D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 025304862792DA9E009563D8 /* Main.storyboard */; };
 		0253048B2792DA9E009563D8 /* LabelSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 025304892792DA9E009563D8 /* LabelSample.xcdatamodeld */; };
 		0253048D2792DA9E009563D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0253048C2792DA9E009563D8 /* Assets.xcassets */; };
@@ -21,9 +20,13 @@
 		025304B82792DBA8009563D8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304B72792DBA8009563D8 /* TextView.swift */; };
 		025304BA2792F188009563D8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304B92792F188009563D8 /* MainViewModel.swift */; };
 		025304BC27932719009563D8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304BB27932719009563D8 /* Extension.swift */; };
-		025304BE27933032009563D8 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304BD27933032009563D8 /* TableViewCell.swift */; };
+		025304BE27933032009563D8 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304BD27933032009563D8 /* MainTableViewCell.swift */; };
 		025304C127933180009563D8 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304C027933180009563D8 /* Label.swift */; };
 		025304C32793321C009563D8 /* UnderlineLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304C22793321C009563D8 /* UnderlineLayoutManager.swift */; };
+		025304C5279334B7009563D8 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304C4279334B7009563D8 /* ColorExtension.swift */; };
+		025304C7279335FB009563D8 /* TextAttributeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304C6279335FB009563D8 /* TextAttributeDataSource.swift */; };
+		025304CA27933651009563D8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304C927933651009563D8 /* WebViewController.swift */; };
+		025304CC2793365F009563D8 /* WebViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025304CB2793365F009563D8 /* WebViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +50,6 @@
 		0253047D2792DA9E009563D8 /* LabelSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabelSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		025304802792DA9E009563D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		025304822792DA9E009563D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		025304842792DA9E009563D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		025304872792DA9E009563D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0253048A2792DA9E009563D8 /* LabelSample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LabelSample.xcdatamodel; sourceTree = "<group>"; };
 		0253048C2792DA9E009563D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,9 +64,13 @@
 		025304B72792DBA8009563D8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		025304B92792F188009563D8 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		025304BB27932719009563D8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		025304BD27933032009563D8 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		025304BD27933032009563D8 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		025304C027933180009563D8 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		025304C22793321C009563D8 /* UnderlineLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineLayoutManager.swift; sourceTree = "<group>"; };
+		025304C4279334B7009563D8 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		025304C6279335FB009563D8 /* TextAttributeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAttributeDataSource.swift; sourceTree = "<group>"; };
+		025304C927933651009563D8 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		025304CB2793365F009563D8 /* WebViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,12 +121,12 @@
 		0253047F2792DA9E009563D8 /* LabelSample */ = {
 			isa = PBXGroup;
 			children = (
+				025304C82793363B009563D8 /* Web */,
 				025304BF27933175009563D8 /* Label */,
 				025304B62792DB9E009563D8 /* Text */,
 				025304B32792DABA009563D8 /* Main */,
 				025304802792DA9E009563D8 /* AppDelegate.swift */,
 				025304822792DA9E009563D8 /* SceneDelegate.swift */,
-				025304842792DA9E009563D8 /* ViewController.swift */,
 				025304862792DA9E009563D8 /* Main.storyboard */,
 				0253048C2792DA9E009563D8 /* Assets.xcassets */,
 				0253048E2792DA9E009563D8 /* LaunchScreen.storyboard */,
@@ -151,9 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				025304B42792DAC9009563D8 /* MainViewController.swift */,
+				025304BD27933032009563D8 /* MainTableViewCell.swift */,
 				025304B92792F188009563D8 /* MainViewModel.swift */,
 				025304BB27932719009563D8 /* Extension.swift */,
-				025304BD27933032009563D8 /* TableViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -171,8 +177,19 @@
 			children = (
 				025304C027933180009563D8 /* Label.swift */,
 				025304C22793321C009563D8 /* UnderlineLayoutManager.swift */,
+				025304C4279334B7009563D8 /* ColorExtension.swift */,
+				025304C6279335FB009563D8 /* TextAttributeDataSource.swift */,
 			);
 			path = Label;
+			sourceTree = "<group>";
+		};
+		025304C82793363B009563D8 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				025304C927933651009563D8 /* WebViewController.swift */,
+				025304CB2793365F009563D8 /* WebViewExtension.swift */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,14 +324,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				025304BA2792F188009563D8 /* MainViewModel.swift in Sources */,
-				025304852792DA9E009563D8 /* ViewController.swift in Sources */,
+				025304C7279335FB009563D8 /* TextAttributeDataSource.swift in Sources */,
 				025304812792DA9E009563D8 /* AppDelegate.swift in Sources */,
-				025304BE27933032009563D8 /* TableViewCell.swift in Sources */,
+				025304C5279334B7009563D8 /* ColorExtension.swift in Sources */,
+				025304BE27933032009563D8 /* MainTableViewCell.swift in Sources */,
+				025304CC2793365F009563D8 /* WebViewExtension.swift in Sources */,
 				0253048B2792DA9E009563D8 /* LabelSample.xcdatamodeld in Sources */,
 				025304B82792DBA8009563D8 /* TextView.swift in Sources */,
 				025304832792DA9E009563D8 /* SceneDelegate.swift in Sources */,
 				025304C32793321C009563D8 /* UnderlineLayoutManager.swift in Sources */,
 				025304B52792DAC9009563D8 /* MainViewController.swift in Sources */,
+				025304CA27933651009563D8 /* WebViewController.swift in Sources */,
 				025304C127933180009563D8 /* Label.swift in Sources */,
 				025304BC27932719009563D8 /* Extension.swift in Sources */,
 			);
